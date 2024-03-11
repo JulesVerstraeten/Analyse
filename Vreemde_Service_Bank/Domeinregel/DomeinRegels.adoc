@@ -1,0 +1,5 @@
+= Domeinregels
+
+- DR_01: Klant moet 18 jaar oud zijn of ouder.
+- DR_02: Bij balans onder de 0 op de rekening word een kost van 5% berekend.
+- DR_03: Valuta enkel in euro's  
