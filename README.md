@@ -1,6 +1,6 @@
 # Analyse
 
-Alle projecten van groep H kan zich hier bevinden
+Hier bevind alle projecten van Groep H
 
 Groep H:
 - Jules Verstraeten
