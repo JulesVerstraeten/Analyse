@@ -1,0 +1,69 @@
+= BUC_AO Aanwezigheden Opnemen
+:author: Sander Vervaet
+:email: sander.vervaet@student.hogent.be
+:toc: auto
+
+== Omschrijving
+
+De leerkracht wilt de aanwezigheden nemen van de studenten in de les.
+
+== Actors
+
+[underline]*Student*, leerkracht 
+
+== Preconditie
+
+De studenten moeten ingeschreven zijn voor het vak dat op dat moment gegeven wordt.
+
+== Basispad
+
+. De leerkracht wilt 5 min na start van les de aanwezigheden opnemen. 
+. De leerkracht neem de lijst met namen van studenten dat in deze module zouden zitten.
+. De leerkracht roept de eerste naam af.
+. De [underline]*Student* met die naam laat weten dat hij aanwezig is. 
+. De leerkracht vinkt deze persoon af.
+. De leerkracht roept de naam eronder af BUC gaat terug naar stap 4.
+. Wanneer alle namen zijn opgenoemd controleert de leerkracht of hij/zij iedereen heeft. 
+. De buisness use case eindigt.
+
+== Alternatief A: Student is niet aanwezig
+[start=4]
+. De [underline]*student* laat niks horen.
+. De leerkracht zet de student op afwezig.
+. Business use case gaat terug naar stap 6.
+
+=== Alternatief B: Lessenrooster van leerkracht en student komen niet overeen
+[start=1]
+. De leerkracht wilt na 5 min de aanwezigheden opnemen maar er zit niemand in de les.
+. De leerkracht controleert lessenrooster.
+. De leerkracht vraagt aan de eerste aanwezige [underline]*student* waarom die te laat toekwam.
+. De [underline]*student* legt uit dat zijn schema zegt dat hij op tijd is.
+. De leerkracht wacht tot 5 min vanaf de les start op het schema van de studenten.
+. Business use case gaat terug naar stap 2.
+
+== Exception A: Student staat niet op de lijst.
+[start=8]
+. De [underline]*student* zegt dat zijn naam niet is afgeroepen.
+. De leerkracht vraagt naam van de student.
+. De [underline]*student* zegt zijn naam dat niet op de lijst staat.
+. De leerkracht ziet dat de [underline]*student* niet ingeschreven is voor de module en meldt dit aan de [underline]*student*.
+. De [underline]*student* verlaat de les.
+. De business use case eindigt.
+
+=== Postconditie
+
+In de administratie staat nu welke student aanwezig is voor deze les. 
+
+== Scenario
+=== SC_AO Jan komt 10 min na start van de les toe.
+|===
+|*Datum* | *Student* | *Les* | *Leerkracht* | *aankomst tijd*
+| 18/03/2024 | Jan Janssens | Analyse | Rob Robertus | 08:25
+|===
+
+. De les analyse begint om 08:15.
+. Leerkracht Rob wilt de aanwezigheden opnemen om 08:20.
+. Leerkracht Rob roep de naam van Jan Janssens af.
+. Jan is laat niks horen.
+. Leerkracht Rob zet Jan op afwezig.
+. Buisness use case eindigt.

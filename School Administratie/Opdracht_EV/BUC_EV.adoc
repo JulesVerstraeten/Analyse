@@ -1,0 +1,72 @@
+= BUC_EV - Evaluatie
+:author: Jules Verstraeten
+:email: jules.verstraeten@student.hogent.be
+:toc: auto
+
+== Omschrijving
+Een persoon doet mee aan evaluatie, op het einde word de score berekend en word er een feedback gegeven door een docent.
+
+== Actors
+[.underline]#Student#, docent
+
+== Preconditie
+[.underline]#Student# is ingeschreven voor de opleiding waar het evaluatie voor is.
+
+== Basispad
+. [.underline]#Student# gaat op tijd naar binnen
+. [.underline]#Student# meld zich aan voor de evaluatie
+. Docent start de evaluatie op afgesproken tijd
+. [.underline]#Student# maakt de evaluatie
+. Docent stopt de evaluatie op afgesproken tijd
+. [.underline]#Student# levert de evaluatie in en laat in de evaluatie zijn naam en achternaam achter
+. [.underline]#Student# gaat naar huis
+. Docent kijkt de evaluatie na
+. Docent geeft een score op basis van link:../Domeinregels/DR.adoc#_dr_s[DR_S]
+. Docent geeft een feedback
+. bussines user case eindigt
+
+== Alternatives
+=== A: Verkeerde evaluatie
+. [.underline]#Student# ziet dat dit niet de evaluatie is voor zijn/haar opleiding.
+. [.underline]#Student# geeft dit aan aan de docent
+. [.underline]#Student# gaat naar huis
+. bussines user case eindigt
+
+=== B: Spelling fout
+. [.underline]#Student# heeft een spellingsfout gevonden in de evaluatie
+. [.underline]#Student# geeft de spellingsfout aan de docent
+. Docent gaat deze spellingsfout verbeteren
+. bussines user case gaat verder op basispad 4.
+
+== Exceptions 
+=== A: Student is ziek
+. [.underline]#Student# geeft aan dat hij ziek is
+. Docent regelt een inhaal moment
+. bussines user case eindigt
+
+=== B: Student is niet aanwezig
+. [.underline]#Student# komt niet opdagen
+. Docent geeft een score van 0
+. Docent geeft geen feedback
+. bussines user case eindigt
+
+== Postconditie
+De [.underline]#Student# heeft een score voor een evaluatie voor zijn opleiding.
+
+== Scenario
+
+|===
+|Datum|Student|Opleiding|Docent|Start Tijd
+|25-03-2024|Jan Janssens|Programmeren|Rob Robertus|14:00
+|===
+. De evaluatie begint om 14:00
+. Jan komt 13:55 aan bij de evaluatie
+. Rob start de evaluatie om 14:00
+. Jan maakt de evaluatie
+. Rob stopt de evaluatie om 14:30
+. Jan levert de evaluatie in
+. Jan gaat naar huis
+. Rob kijkt de evaluatie na
+. Rob geeft een score op basis van DR_S
+. Rob geeft een feedback
+. bussines user case eindigt

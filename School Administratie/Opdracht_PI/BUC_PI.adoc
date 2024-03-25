@@ -1,0 +1,99 @@
+= BUC_PI - Persoon Inschrijven
+:author: Arne Rateau
+:email: arne.rateau@student.hogent.be
+:firstname: Arne
+:revnumber: v3.0
+:revdate: 11.03.24
+:revremark: Final
+:toc: auto
+
+== Omschrijving 
+Een persoon wil zich inschrijven aan de school.
+
+== Actors 
+[underline]*Persoon*, medewerker.
+
+== Preconditie 
+[underline]*Persoon* is op het moment van inschrijving minstens 18 jaar oud. link:../Domeinregels/DR.adoc[Zie DR_L.] 
+[underline]*Persoon* beschikt over een geldig diploma secundair onderwijs. link:../Domeinregels/DR.adoc[Zie DR_L.]
+
+== Basis Pad
+. De [underline]*Persoon* wil zich inschrijven
+. De medewerker vraagt de identiteitskaart en gaat na of de [underline]*Persoon* minstens 18 jaar is. (link:../Domeinregels/DR.adoc[Zie DR_L.])
+. De medewerker vraagt naar een huidig adres van de [underline]*Persoon*
+. De medewerker vraagt bewijs van een geldig diploma en controleert dit.
+. De medewerker noteert een email adres van de [underline]*Persoon*.
+. De medewerker vraagt in welke opleiding de [underline]*Persoon* zich in wilt schrijven. 
+. De [underline]*Persoon* zegt voor welke opleiding hij/zij wilt ingeschreven worden.
+. De medewerker geeft de nodige informatie m.b.t de opleiding.
+. De medewerker geeft het inschrijvingsformulier 
+. De [underline]*Persoon* vult het inschrijvingsformulier correct in. 
+. De medewerker verstuurt een bevestigingsmail naar de [underline  ]*Persoon*. 
+. De [underline]*Persoon* bevestigt zijn/haar inschrijving.
+. De nodige gegevens worden opgeslagen
+. De student is ingeschreven
+. De use case eindigt.
+
+== Postconditie
+Een nieuwe student is ingeschreven.
+
+== Alternatief A: Email
+
+[start = 8]
+
+. De medewerker verstuurt een bevestigingsmail naar de [underline]*Persoon*.
+. De email is niet aangekomen
+. De [underline]*Persoon* blijkt een vekeerde email te hebben doorgegeven.
+. De medewerker past de email aan.
+. Business use case gaat terug naar stap 11.
+
+== Exception A: 18+
+
+
+[start = 2]
+
+. De medewerker vraagt de identiteitskaart en gaat na of de [underline]*Persoon* minstens 18 jaar is.
+. De [underline]*Persoon* is op het moment van inschrijving nog niet 18 jaar of ouder 
+. De use case eindigt 
+
+== Exception B: Diploma
+
+[start = 3]
+
+. De medewerker vraagt bewijs van een geldig diploma en controleert dit. link:../Domeinregels/DR.adoc[Zie DR_D.]
+. Het diploma is niet geldig of adequaat om de opleiding te volgen.
+. De use case eindigt
+
+== Exception C: Nederlands
+. De [underline]*Persoon* wil zich inschrijven
+. De medewerker ondervind dat de [underline]*Persoon* niet de nederlandse taal beheerst. link:../Domeinregels/DR.adoc[Zie DR_N.]
+. De [underline]*Persoon* is niet toegestaan de opleiding te volgen zonder het beheersen van de nederlandse taal.
+. De use case eindigt.
+
+== Scenario
+[%hardbreaks]
+SC_PI - [underline]*Persoon* wil zich inschrijven onder de leeftijd van 18.
+Dit scenario volgt basispad 1 + Alternatief A.
+
+|===
+|*Datum* | *Student* | *Geboortedatum*
+| 18/03/2024 | Jan Janssens | 24/09/2006
+|===
+
+. Jan Janssens wil zich inschrijven
+. De medewerker Ben Dover vraagt de identiteitskaart en gaat na of de Jan Janssens minstens 18 jaar is. 
+. Ben Dover vraagt bewijs van een geldig diploma en controleert dit.
+. Ben Dover noteert een email adres van Jan Janssens.
+. De medewerker vraagt in welke opleiding de [underline]*Persoon* zich in wilt schrijven. 
+. De [underline]*Persoon* zegt voor welke opleiding hij/zij wilt ingeschreven worden.
+. De medewerker geeft de nodige informatie m.b.t de opleiding.
+. De medewerker geeft het inschrijvingsformulier 
+. De [underline]*Persoon* vult het inschrijvingsformulier correct in. 
+. De medewerker verstuurt een bevestigingsmail naar de [underline  ]*Persoon*.
+. De email is niet aangekomen
+. De [underline]*Persoon* blijkt een vekeerde email te hebben doorgegeven.
+. De medewerker past de email aan.
+. De [underline]*Persoon* bevestigt zijn/haar inschrijving.
+. De nodige gegevens worden opgeslagen
+. De student is ingeschreven
+. De use case eindigt.

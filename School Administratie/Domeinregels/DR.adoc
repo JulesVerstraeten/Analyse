@@ -1,0 +1,18 @@
+= Domeinregels Schooladministratie
+:toc: auto
+
+== DR_L
+
+Een potentiële leerling moet ten tijde van inschrijving minstens 18 jaar oud zijn.
+
+== DR_N
+
+Een potentiële leerling moet de nederlandse taal zorgvuldig beheersen.
+
+== DR_D
+
+Een potentiële leerling moet ten tijde van de inschrijving beschikken over een geldig diploma secundair onderwijs.
+
+== DR_S
+
+De docent bereken de score zodat de score op x/20 valt. Als x een komma getal is, dan word x afgerond op een geheel getal. De herkansing word meeberekend.

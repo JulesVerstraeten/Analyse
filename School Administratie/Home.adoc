@@ -1,0 +1,39 @@
+= School Administratie
+:authors: Jules Verstraeten, Sander Vervaet, Arne Rateau (Groep H)
+:toc: auto
+
+== Bussiness Use Cases
+
+=== - Persoon Inschrijven
+link:./Opdracht_PI/BUC_PI.adoc[Opdracht_PI]
+
+Gemaakt door: Arne
+
+=== - Evaluatie
+link:./Opdracht_EV/BUC_EV.adoc[Opdracht_EV]
+
+Gemaakt door: Jules
+
+=== - Afwezigheid Opnemen
+link:./Opdracht_AO/BUC_AO.adoc[Opdracht_AO]
+
+Gemaakt door: Sander
+
+== Domeinregels
+link:./Domeinregels/DR.adoc[Domeinregels]
+
+== Activity Diagrams
+=== - Persoon Inschrijven
+link:./Images/AC_PI.png[image:./Images/AC_PI.png[width=40%]]
+
+Gemaakt door: Arne
+
+=== - Evaluatie
+link:./Images/AC_EV.png[image:./Images/AC_EV.png[width=40%]]
+
+Gemaakt door: Jules
+
+=== - Afwezigheid Opnemen
+link:./Images/AC_AO.png[image:./Images/AC_AO.png[width=40%]]
+
+Gemaakt door: Sander
